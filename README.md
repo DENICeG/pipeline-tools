@@ -3,9 +3,11 @@
 Home for the Dockerfile of the deniceg/pipeline-tools
 
 It contains:
+* kubectl
 * kubecrypt
 * kubeinfo
 * yaml-renderer
+* sensuctl
 * bash
 * curl
 * git
