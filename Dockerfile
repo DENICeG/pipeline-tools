@@ -11,8 +11,8 @@ RUN apk add --update --no-cache curl bash git docker make jq bind-tools
 RUN curl -LO https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/linux/amd64/kubectl
 RUN chmod +x kubectl
 RUN mv kubectl /usr/bin
-COPY --from=yaml-renderer /yaml-renderer /usr/bin/yaml-renderer
-COPY --from=kubecrypt /kubecrypt /usr/bin/kubecrypt
-COPY --from=kubeinfo /kubeinfo /usr/bin/kubeinfo
+COPY --from=yaml-renderer /usr/bin/yaml-renderer /usr/bin/yaml-renderer
+COPY --from=kubecrypt /usr/bin/kubecrypt /usr/bin/kubecrypt
+COPY --from=kubeinfo /usr/bin/kubeinfo /usr/bin/kubeinfo
 COPY --from=sensu /usr/local/bin/sensuctl /usr/bin/sensuctl
 
