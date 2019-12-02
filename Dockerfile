@@ -1,7 +1,8 @@
 FROM sebidude/yaml-renderer:v1.4.1 as yaml-renderer
 FROM sebidude/kubecrypt:v0.4.1-1.15 as kubecrypt
 FROM sebidude/kubeinfo:v0.1.0-1.15 as kubeinfo
-FROM sensu/sensu:5.14.2 as sensu
+FROM sensu/sensu:5.15.0 as sensu
+FROM thorko/helm3:latest as helm
 
 
 # create the tools image
@@ -15,4 +16,4 @@ COPY --from=yaml-renderer /usr/bin/yaml-renderer /usr/bin/yaml-renderer
 COPY --from=kubecrypt /usr/bin/kubecrypt /usr/bin/kubecrypt
 COPY --from=kubeinfo /usr/bin/kubeinfo /usr/bin/kubeinfo
 COPY --from=sensu /usr/local/bin/sensuctl /usr/bin/sensuctl
-
+COPY --from=helm /usr/bin/helm /usr/bin/helm
