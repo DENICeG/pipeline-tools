@@ -2,7 +2,7 @@ FROM sebidude/yaml-renderer:v1.4.1 as yaml-renderer
 FROM sebidude/kubecrypt:v0.4.1-1.15 as kubecrypt
 FROM sebidude/kubeinfo:v0.1.0-1.15 as kubeinfo
 FROM sensu/sensu:5.15.0 as sensu
-FROM thorko/helm3:latest as helm
+FROM thorko/helm3:v1.0.0 as helm
 
 
 # create the tools image

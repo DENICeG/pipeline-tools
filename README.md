@@ -15,6 +15,7 @@ It contains:
 * make
 * jq
 * bind-tools
+* helm
 
 To update something, adjust the versions stated in the Dockerfile.
 
