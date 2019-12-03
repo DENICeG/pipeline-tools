@@ -21,5 +21,5 @@ To update something, adjust the versions stated in the Dockerfile.
 
 ## Use it example
 ```
-docker pull deniceg/pipeline-tools:v1.0.0
+docker pull deniceg/pipeline-tools:1.0.5
 ```
