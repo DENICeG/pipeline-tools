@@ -14,7 +14,7 @@ FROM sensu/sensu:5.15.0 as sensu
 # create the tools image
 FROM alpine:3.10
 
-RUN apk add --update --no-cache curl bash git docker make jq bind-tools
+RUN apk add --update --no-cache curl bash git docker make jq bind-tools gettext
 RUN curl -LO https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/linux/amd64/kubectl
 RUN chmod +x kubectl
 RUN mv kubectl /usr/bin
