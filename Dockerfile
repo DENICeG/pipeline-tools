@@ -8,7 +8,7 @@ RUN /tmp/get_helm.sh
 FROM sebidude/yaml-renderer:v1.4.7 as yaml-renderer
 FROM sebidude/kubecrypt:v0.4.1-1.15 as kubecrypt
 FROM sebidude/kubeinfo:v0.1.0-1.15 as kubeinfo
-FROM sensu/sensu:5.15.0 as sensu
+FROM sensu/sensu:5.16.1 as sensu
 
 
 # create the tools image
