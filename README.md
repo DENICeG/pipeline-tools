@@ -6,6 +6,7 @@ It contains:
 * kubectl
 * kubecrypt
 * kubeinfo
+* porecry
 * yaml-renderer
 * sensuctl
 * bash

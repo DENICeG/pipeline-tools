@@ -8,6 +8,7 @@ RUN /tmp/get_helm.sh
 FROM sebidude/yaml-renderer:v1.4.7 as yaml-renderer
 FROM sebidude/kubecrypt:v0.6.1-1.15 as kubecrypt
 FROM sebidude/kubeinfo:v0.1.0-1.15 as kubeinfo
+FROM sebidude/porecry:v0.1.5 as porecry
 FROM sensu/sensu:6.1.1 as sensu
 
 
@@ -22,5 +23,6 @@ RUN mv kubectl /usr/bin
 COPY --from=yaml-renderer /usr/bin/yaml-renderer /usr/bin/yaml-renderer
 COPY --from=kubecrypt /usr/bin/kubecrypt /usr/bin/kubecrypt
 COPY --from=kubeinfo /usr/bin/kubeinfo /usr/bin/kubeinfo
+COPY --from=porecry /usr/bin/porecry /usr/bin/porecry
 COPY --from=sensu /usr/local/bin/sensuctl /usr/bin/sensuctl
 COPY --from=helm /usr/local/bin/helm /usr/bin/helm
