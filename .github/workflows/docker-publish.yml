@@ -1,4 +1,4 @@
-{{steps.vars.outputs.tag}}# This workflow uses actions that are not certified by GitHub.
+${GITHUB_REF#refs/*/}{{steps.vars.outputs.tag}}# This workflow uses actions that are not certified by GitHub.
 # They are provided by a third-party and are governed by
 # separate terms of service, privacy policy, and support
 # documentation.
@@ -28,4 +28,4 @@ jobs:
         with:
           context: .
           push: true
-          tags: deniceg/pipeline-tools:{{steps.vars.outputs.tag}},deniceg/pipeline-tools:latest
+          tags: deniceg/pipeline-tools:${GITHUB_REF#refs/*/},deniceg/pipeline-tools:latest
