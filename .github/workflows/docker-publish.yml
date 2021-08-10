@@ -1,13 +1,15 @@
-${GITHUB_REF#refs/*/}{{steps.vars.outputs.tag}}# This workflow uses actions that are not certified by GitHub.
+#This workflow uses actions that are not certified by GitHub.
 # They are provided by a third-party and are governed by
 # separate terms of service, privacy policy, and support
 # documentation.
 
 name: Publish Docker image
 
-on:
-  release:
-    types: [published]
+#on:
+#  release:
+#    types: [published]
+
+on: [push]
 
 jobs:
   push_to_registry:
