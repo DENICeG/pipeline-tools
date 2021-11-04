@@ -8,7 +8,7 @@ FROM sebidude/yaml-renderer:v1.4.7 as yaml-renderer
 FROM sebidude/kubecrypt:v0.6.1-1.15 as kubecrypt
 FROM sebidude/kubeinfo:v0.1.0-1.15 as kubeinfo
 FROM sebidude/porecry:v0.1.5 as porecry
-FROM sensu/sensu:6.4.1 as sensu
+FROM sensu/sensu:6.5.4 as sensu
 
 
 # create the tools image
